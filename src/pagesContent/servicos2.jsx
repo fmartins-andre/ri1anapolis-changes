@@ -22,18 +22,15 @@ const useStyles = makeStyles({
 })
 
 const CertidaoPanel = loadable(() => import("./certidaoPanel"))
-const AgendamentoPanel = loadable(() => import("./agendamentoPanel"))
 const DocumentosPanel = loadable(() => import("./documentosPanel2"))
 
 const ServicosSectionContent = () => {
   const classes = useStyles()
   const handleDrawer = useDrawerToggler()
-  const agendamentoButtonRef = useRef(null)
   const certidaoButtonRef = useRef(null)
   const documentosButtonRef = useRef(null)
 
   useEffect(() => {
-    createObserver(agendamentoButtonRef.current, AgendamentoPanel.preload)
     createObserver(certidaoButtonRef.current, CertidaoPanel.preload)
     createObserver(documentosButtonRef.current, DocumentosPanel.preload)
   }, [])
@@ -68,35 +65,13 @@ const ServicosSectionContent = () => {
           align="left"
           component="h2"
           variant="subtitle2"
-          id="agendamento"
-        >
-          <strong>Agendamento</strong>
-        </Typography>
-        <Typography align="left" className={classes.hyphenate}>
-          Agendamento de atendimento presencial, entrega ou retirada de
-          documentos.
-        </Typography>
-        <StyledButton
-          ref={agendamentoButtonRef}
-          size="small"
-          variant="contained"
-          color="primary"
-          onClick={handleDrawer("drawerAgendamento")}
-        >
-          Agendar atendimento
-        </StyledButton>
-        <Typography paragraph />
-
-        <Typography
-          align="left"
-          component="h2"
-          variant="subtitle2"
           id="certidoes"
         >
           <strong>Certidões</strong>
         </Typography>
         <Typography align="left" className={classes.hyphenate}>
-          Solicite buscas ou emissão de certidões.
+          Solicite sua certidão física presencialmente na sede da serventia, ou
+          a certidão eletrônica online, pelo portal SAEC.
         </Typography>
 
         <StyledButton
@@ -106,7 +81,7 @@ const ServicosSectionContent = () => {
           color="primary"
           onClick={handleDrawer("drawerCertidoes")}
         >
-          Solicitar Certidão / Busca
+          Solicitar Certidão Eletrônica
         </StyledButton>
 
         <Typography paragraph />
@@ -136,10 +111,6 @@ const ServicosSectionContent = () => {
 
       <StyledDrawer id="drawerCertidoes" anchor="bottom">
         <CertidaoPanel handleDrawer={handleDrawer("drawerCertidoes")} />
-      </StyledDrawer>
-
-      <StyledDrawer id="drawerAgendamento">
-        <AgendamentoPanel />
       </StyledDrawer>
 
       <StyledDrawer id="drawerDocumentos2">

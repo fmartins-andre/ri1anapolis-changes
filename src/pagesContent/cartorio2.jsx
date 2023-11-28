@@ -5,7 +5,7 @@ import { Article, Section, Aside } from "../components/section2"
 import Typography from "@material-ui/core/Typography"
 import makeStyles from "@material-ui/styles/makeStyles"
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   hyphenate: {
     wordWrap: "break-word !important",
     overflowWrap: "break-word !important",
@@ -13,7 +13,12 @@ const useStyles = makeStyles({
     "-ms-hyphens": "auto",
     hyphens: "auto",
   },
-})
+  columns: {
+    [theme.breakpoints.up("sm")]: {
+      columns: 2,
+    },
+  },
+}))
 
 const CartorioSectionContent = () => {
   const classes = useStyles()
@@ -31,7 +36,7 @@ const CartorioSectionContent = () => {
 
   return (
     <Article id="cartorio">
-      <Section>
+      <Section lg={6}>
         <Typography component="h1" variant="h4">
           O Cartório
         </Typography>
@@ -49,9 +54,10 @@ const CartorioSectionContent = () => {
           Visão
         </Typography>
         <Typography paragraph className={classes.hyphenate}>
-          Prestar um serviço público registral de excelência máxima, com a
-          melhor estrutura, equipe e tecnologias, visando a máxima eficiência,
-          agilidade e conhecimento técnicos e no atendimento ao público.
+          Prestar um serviço público registral de excelência, com a melhor
+          estrutura, equipe e tecnologias, visando a máxima eficiência no
+          atendimento ao público, bem como na agilidade e conhecimento técnico
+          nas análises dos títulos sujeitos à qualificação registral.
         </Typography>
 
         <Typography component="h2" variant="h6">
@@ -61,7 +67,7 @@ const CartorioSectionContent = () => {
           São nossos valores, que devem permear todas as atividades
           desenvolvidas na Serventia:
         </Typography>
-        <ul>
+        <ul className={classes.columns}>
           <li>
             <strong>Profissionalismo</strong>
           </li>
@@ -91,11 +97,11 @@ const CartorioSectionContent = () => {
           </li>
         </ul>
       </Section>
-      <Aside>
+      <Aside lg={6}>
         <Img
           fluid={image.file.childImageSharp.fluid}
           alt="1º RI de Anápolis/GO: Eficiência e Profissionalismo!"
-          style={{ width: "100%" }}
+          style={{ width: "100%", height: "100%" }}
         />
       </Aside>
     </Article>

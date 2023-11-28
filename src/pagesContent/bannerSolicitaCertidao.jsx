@@ -33,38 +33,32 @@ const BannerSolicitaCertidao = () => {
         container
         xs={12}
         sm={10}
-        md={6}
-        lg={5}
-        xl={4}
         className={classes.bannerTextWrapper}
         direction="column"
         alignItems="center"
         justifyContent="center"
       >
         <Typography variant="subtitle2" paragraph align="center">
-          <strong>Solicite certidões e buscas online!</strong>
+          <strong>Certidões e Buscas</strong>
         </Typography>
         <Typography paragraph align="center">
-          Acesse a seção de serviços e solicite certidões e buscas online. A
-          certidão será enviada unicamente em meio digital.
+          Certidões e buscas agora serão feitas pela SAEC - Serviço de
+          Atendimento Eletrônico Compartilhado.
+        </Typography>
+        <Typography paragraph align="center">
+          Acesse o SAEC e solicite sua Certidão.
         </Typography>
         <Button
-          component={AnchorLink}
-          offset={
-            useMediaQuery("(max-width: 959px) and (max-height: 959px)")
-              ? 104
-              : 89
-          }
-          href={
-            useMediaQuery("(max-width: 959px) and (max-height: 959px)")
-              ? "#certidoes"
-              : "#servicos"
-          }
+          component={"a"}
           variant="contained"
           color="primary"
           align="center"
+          href="https://registradores.onr.org.br/"
+          target="_blank"
+          noopener
+          noreferrer
         >
-          Solicitar certidões / buscas
+          SOLICITAR CERTIDÕES / BUSCAS
         </Button>
       </Grid>
     </Grid>

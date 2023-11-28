@@ -44,7 +44,7 @@ const ContatoSectionContent = () => {
           <Typography paragraph>
             Agende um horário, tire dúvidas, faça uma visita. O atendimento
             presencial e pelos canais de comunicação se dá de segunda a
-            sexta-feira das 09:00h as 17:00h.
+            sexta-feira das 08:00h as 17:00h.
           </Typography>
 
           <Grid container justifyContent="space-around">
@@ -120,20 +120,19 @@ const ContatoSectionContent = () => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <>
-                        <Typography variant="body2">
-                          <Link
-                            className={classes.contactLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="mailto:primeirocartorioregistro@gmail.com"
-                          >
-                            primeirocartorioregistro
-                            <wbr />
-                            @gmail.com
-                          </Link>
-                        </Typography>
-                      </>
+                      <Typography variant="body2">
+                        email:{" "}
+                        <Link
+                          className={classes.contactLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="mailto:primeirocartorioregistro@gmail.com"
+                        >
+                          primeirocartorioregistro
+                          <wbr />
+                          @gmail.com
+                        </Link>
+                      </Typography>
                     }
                   />
                 </ListItem>
@@ -143,12 +142,15 @@ const ContatoSectionContent = () => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Link
-                        className={classes.contactLink}
-                        href="tel:+556239374650"
-                      >
-                        (62) 3937-4650
-                      </Link>
+                      <Typography variant="body2">
+                        telefone: <wbr />
+                        <Link
+                          className={classes.contactLink}
+                          href="tel:+556239374650"
+                        >
+                          (62) 3937-4650
+                        </Link>
+                      </Typography>
                     }
                   />
                 </ListItem>
@@ -158,14 +160,17 @@ const ContatoSectionContent = () => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Link
-                        className={classes.contactLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://wa.me/556239374650"
-                      >
-                        (62) 3937-4650
-                      </Link>
+                      <Typography variant="body2">
+                        whatsapp: <wbr />
+                        <Link
+                          className={classes.contactLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://wa.me/556239374650"
+                        >
+                          (62) 3937-4650
+                        </Link>
+                      </Typography>
                     }
                   />
                 </ListItem>
@@ -175,14 +180,17 @@ const ContatoSectionContent = () => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Link
-                        className={classes.contactLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.instagram.com/ri1anapolis/"
-                      >
-                        @ri1anapolis
-                      </Link>
+                      <Typography variant="body2">
+                        instagram: <wbr />
+                        <Link
+                          className={classes.contactLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.instagram.com/ri1anapolis/"
+                        >
+                          @ri1anapolis
+                        </Link>
+                      </Typography>
                     }
                   />
                 </ListItem>
