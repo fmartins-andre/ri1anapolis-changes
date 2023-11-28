@@ -2,11 +2,8 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
 import makeStyles from "@material-ui/styles/makeStyles"
 import useTheme from "@material-ui/styles/useTheme"
-
-import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const useStyles = makeStyles(theme => ({
   banner: {
