@@ -64,12 +64,13 @@ const SearchReport = () => {
               E-mail cadastrado: "{data.process.email}"
             </Typography>
           )}
-          {data.process?.status && (
+
+          {/* {data.process?.status && (
             <Typography className={classes.hyphenate}>
               <strong>Atenção</strong>: Seu protocolo possui a seguinte
               observação: "{data.process.status}".
             </Typography>
-          )}
+          )} */}
 
           {data.process.step?.allow_notes_download &&
             data.requirements_note?.encrypted_url && (

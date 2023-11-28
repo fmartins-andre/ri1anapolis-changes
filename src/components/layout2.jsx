@@ -12,20 +12,12 @@ import getBanners from "./banner/getBanners"
 const Banner = loadable(() => import("./banner/index"), {
   fallback: <SectionLoadingFallback height="350px" />,
 })
-const BannerNovoHorarioAtendimento = loadable(
-  () => import("../pagesContent/bannerNovoHorarioAtendimento"),
+const BannerHorarioAtendimento = loadable(
+  () => import("../pagesContent/bannerHorarioAtendimento"),
   { fallback: <SectionLoadingFallback height="350px" /> }
 )
 const BannerSolicitaCertidao = loadable(
   () => import("../pagesContent/bannerSolicitaCertidao"),
-  { fallback: <SectionLoadingFallback height="350px" /> }
-)
-const BannerAgendamento = loadable(
-  () => import("../pagesContent/bannerAgendamento"),
-  { fallback: <SectionLoadingFallback height="350px" /> }
-)
-const BannerCoronaVirus = loadable(
-  () => import("../pagesContent/bannerCoronaVirus"),
   { fallback: <SectionLoadingFallback height="350px" /> }
 )
 
@@ -41,7 +33,7 @@ const Layout = props => {
   const topElementId = "home"
   const [banners, setBanners] = useState(null)
   Banner.preload()
-  BannerNovoHorarioAtendimento.preload()
+  BannerHorarioAtendimento.preload()
 
   useEffect(() => {
     async function _getBanners() {
@@ -58,10 +50,8 @@ const Layout = props => {
       <CssBaseline />
       <Header id={topElementId} />
       <Banner onlineBanners={banners}>
-        <BannerNovoHorarioAtendimento />
+        <BannerHorarioAtendimento />
         <BannerSolicitaCertidao />
-        <BannerAgendamento />
-        <BannerCoronaVirus />
       </Banner>
       <Grid
         container

@@ -30,7 +30,7 @@ const CertidaoPanel = props => {
           <Typography paragraph>
             Em virtude da criação do Serviço de Atendimento Eletrônico
             Compartilhado (SAEC), passaremos a recepcionar solicitações de
-            certidões apenas por meio do portal{" "}
+            certidões eletrônicas por meio do portal{" "}
             <Link
               href="https://registradores.onr.org.br/"
               target="_blank"
@@ -38,7 +38,8 @@ const CertidaoPanel = props => {
             >
               https://registradores.onr.org.br/
             </Link>
-            .
+            . Pedidos de certidões físicas poderão ser solicitados diretamente
+            na sede da serventia.
           </Typography>
 
           <Typography paragraph>
