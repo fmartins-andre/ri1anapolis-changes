@@ -2,7 +2,6 @@ import React from "react"
 import Grid from "@material-ui/core/Grid"
 import Container from "@material-ui/core/Container"
 import Typography from "@material-ui/core/Typography"
-import Link from "@material-ui/core/Link"
 
 const BannerHorarioAtendimento = () => {
   return (
@@ -21,7 +20,7 @@ const BannerHorarioAtendimento = () => {
         </Typography>
         <Typography align="justify" paragraph>
           A Corregedoria-Geral da Justiça do Estado de Goiás, por meio do Art.
-          90, #1º do Código de Normas e Procedimentos do Foro Extrajudicial,
+          90, §1º do Código de Normas e Procedimentos do Foro Extrajudicial,
           definiu que "O horário de atendimento ao público será das 8 (oito) às
           17 (dezessete) horas, de segunda a sexta-feira, em dias úteis,
           ininterruptamente."
